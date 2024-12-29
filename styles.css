@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0; /* Solid light gray background */
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2); /* Removed backdrop-filter for no glass effect */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.85); /* Less transparency for a normal look */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: #333; /* Darker color for normal text */
+}
+
+input {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* More solid border */
+  border-radius: 8px;
+  background: #f0f0f0; /* Light background for input */
+  color: #333; /* Darker text color for input */
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Darker placeholder text */
+}
+
+input:focus {
+  background-color: #fff; /* Lighter background on focus */
+}
+
+button {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff5a4d;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333; /* Dark color for output text */
+  transition: opacity 0.3s ease;
+}
+
+#output.empty {
+  opacity: 0;
+}
+
+#output.error {
+  color: #ff6347;
+}
+
+#output.success {
+  color: #32cd32;
+}
